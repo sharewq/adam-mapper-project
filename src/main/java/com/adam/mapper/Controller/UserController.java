@@ -33,16 +33,21 @@ public class UserController {
     @RequestMapping(value = "/user")
     @ResponseBody
     public String user() {
-
-        List<SysUser> list = sysUserDao.findUserAll();
-        return list.toString();
+        try {
+            List<SysUser> list = sysUserDao.findUserAll();
+            System.out.println("lsit = " + list.size());
+            return list.toString();
+        } catch (Exception e) {
+            System.out.println("Exception = " + e);
+        }
+        return "Exception";
     }
 
 
     @RequestMapping(value = "/hello")
     @ResponseBody
     public String hello() {
-
+        System.out.println("hello world!!!");
         return "hello world!";
     }
 
