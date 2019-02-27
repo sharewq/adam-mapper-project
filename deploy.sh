@@ -11,11 +11,12 @@
 ### base 函数
 
 cd $PROJ_PATH/adam-mapper-project
+
 mvn clean package
 
 cd target/
 
-java -jar adam-mapper-project-1.0-SNAPSHOT.jar &
+nohup java -jar adam-mapper-project-1.0-SNAPSHOT.jar &
 
 
 

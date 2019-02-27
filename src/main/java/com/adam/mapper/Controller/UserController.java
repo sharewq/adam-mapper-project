@@ -34,7 +34,6 @@ public class UserController {
     @ResponseBody
     public String user() {
 
-
         List<SysUser> list = sysUserDao.findUserAll();
         return list.toString();
     }
